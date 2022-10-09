@@ -18,16 +18,19 @@ function App() {
     {
       name: "usha",
       email: "usha@gmail.com",
-      phno: "12356789",
+      batch: "B39WDT",
+      mobile: "9453627341",
     },
     {
       name: "heena",
       email: "heena@gmail.com",
-      phno: "12356789",
+      batch: "B39WDT",
+      mobile: "1235678934",
     },{
       name: "siva",
       email: "siva@gmail.com",
-      phno: "12356789",
+      batch: "B39WDT",
+      mobile: "1235463767",
     }
   ])
   
