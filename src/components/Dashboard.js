@@ -1,9 +1,6 @@
 import React from 'react'
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
 
 function Dashboard(props) {
-
   return <>
             <div className="container-fluid">
 
@@ -101,36 +98,6 @@ function Dashboard(props) {
                     </div>
                 </div>
                 {/* <input type="text" onChange={(e)=>props.data.setValue(e.target.value)}></input> */}
-
-                <Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                <th>s.no</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Batch</th>
-                                <th>Mobile</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                    {
-                                        props.data.data1.map((data1,i)=>{
-                                            return <tr key={i}>
-                                                <td>{i+1}</td>
-                                                <td>{data1.name}</td>
-                                                <td>{data1.email}</td>
-                                                <td>{data1.batch}</td>
-                                                <td>{data1.mobile}</td>
-                                                <td>
-                                                <Button variant="primary">Edit</Button>
-                                                &nbsp;
-                                                <Button variant="danger">Delete</Button>
-                                                </td>
-                                                </tr>
-                                        })
-                                    }
-                            </tbody>
-                </Table>
                 
             </div>
   </>

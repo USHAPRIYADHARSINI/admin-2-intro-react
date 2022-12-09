@@ -3,7 +3,10 @@ import Dashboard from './components/Dashboard';
 import Adduser from './components/Adduser';
 import Sidebar from './components/Sidebar';
 import React, { useState } from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
+import EditUser from './components/EditUser';
+import Users from './components/Users';
+import  Profile from './components/Profile';
 
 
 function App() {
@@ -34,14 +37,19 @@ function App() {
     }
   ])
   
+  // let navigate = useNavigate();
   // const [value, setValue]=useState(0)
   return <>
     <div id="wrapper">
           <BrowserRouter>
             <Sidebar/>
               <Routes>
-                <Route path='/dashboard' element={<Dashboard data={{data,data1}}/>}/>
-                <Route path='/adduser' element={<Adduser data={{data1,setData1}}/>}/>
+                <Route path='/dashboard' element={<Dashboard data={{data,data1,setData1}}/>}/>
+                <Route path='/users' element={<Users data={{data1,setData1}}/>}/>
+                <Route path='/create-user' element={<Adduser data={{data1,setData1}}/>}/>
+                <Route path='/edit-profile/:id' element={<EditUser data= {{data1, setData1}}/>}/>
+                {/* <Route path='*' element={<navigate to='/adduser'/>}/> */}
+                <Route path='/profile/:id' element={<Profile data= {{data1, setData1}}/>}/>
               </Routes>
           </BrowserRouter>
           

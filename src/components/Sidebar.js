@@ -33,11 +33,20 @@ function Sidebar() {
                             </li>
                         </Link>
                        
-                        <Link to='/adduser' >
+                        <Link to='/users' >
                             <li className="nav-item active">
                                 <div className="nav-link">
                                     <PersonAddAltIcon/> &nbsp;
-                                    <span>Adduser</span>
+                                    <span>Users</span>
+                                </div>
+                            </li>
+                        </Link>
+
+                        <Link to='/create-user' >
+                            <li className="nav-item active">
+                                <div className="nav-link">
+                                    <PersonAddAltIcon/> &nbsp;
+                                    <span>Add User</span>
                                 </div>
                             </li>
                         </Link>
